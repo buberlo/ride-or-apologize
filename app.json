@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "CoRide",
+    "slug": "coride",
+    "version": "1.0.0",
+    "scheme": "coride",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "providesLocationService": true,
+          "locationAlwaysAndWhenInUsePermission": "CoRide tracks background location while a co-ride trip is active.",
+          "locationWhenInUsePermission": "CoRide uses your location to track the live route, turns, and detours."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.coride.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "CoRide uses your location to track the live route, turns, and detours.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "CoRide tracks background location while a co-ride trip is active.",
+        "NSMotionUsageDescription": "CoRide uses motion sensors to detect hard braking, stops, and driving events.",
+        "NSMicrophoneUsageDescription": "CoRide uses the microphone for Twilio voice prompts and battery-confidence voice mode.",
+        "UIBackgroundModes": [
+          "location",
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.coride.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "ACTIVITY_RECOGNITION",
+        "BATTERY_STATS",
+        "WAKE_LOCK",
+        "VIBRATE",
+        "RECORD_AUDIO",
+        "INTERNET"
+      ]
+    },
+    "web
